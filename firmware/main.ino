@@ -1,4 +1,4 @@
-// Librarys
+// Libraries
 #include <MD_Parola.h>
 #include <MD_MAX72xx.h>
 #include <SPI.h>
@@ -13,38 +13,39 @@
 #define CS_PIN 5
 
 // Objects
-MD_PAROLA display = MD_PAROLA(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
+MD_Parola display = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
 BluetoothSerial SerialBT;
 
-// Variable
+// Variables
 String inputString = "";
 String currentText = "Too Cool"; // you can change that later when u need, it's just the default yk
 int brightness = 3; // i think it varies from 0 to 15
 
 // Setup
-void setup(){
+void setup() {
   Serial.begin(115200);
   SerialBT.begin("SilverHelm"); // Bluetooth name, also customizable
 
   display.begin();
   display.setIntensity(brightness);
   display.displayClear();
-  display.displayText(currentText.c_str(); PA_CENTER, 50, 0, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
+
+  display.displayText(currentText.c_str(), PA_CENTER, 50, 0, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
 }
 
-// main loop yk
-void loop(){
+// Main loop
+void loop() {
   readBluetooth();
   display.displayAnimate();
 }
 
-// Bluetooth Handler
-void readBluetooth(){
-  while (SerialBT.availiable()){
+// Bluetooth handler
+void readBluetooth() {
+  while (SerialBT.available()) {
     char c = SerialBT.read();
 
-    if (c == '\n'){
-      proccessCommand(inputString);
+    if (c == '\n') {
+      processCommand(inputString);
       inputString = "";
     } else {
       inputString += c;
@@ -52,27 +53,30 @@ void readBluetooth(){
   }
 }
 
-// command parser
-
-void proccessCommand(String cmd){
+// Command parser
+void processCommand(String cmd) {
   cmd.trim();
 
-  if(cmd.startsWith("TEXT:")){ 
-      currentText = cmd.substring(5);
-      display.displayClear();
+  if (cmd.startsWith("TEXT:")) {
+    currentText = cmd.substring(5);
+    display.displayClear();
+    display.displayText(currentText.c_str(), PA_CENTER, 50, 0, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
+
+  } else if (cmd.startsWith("BRIGHT:")) {
+    brightness = cmd.substring(7).toInt();
+    brightness = constrain(brightness, 0, 15);
+    display.setIntensity(brightness);
+
+  } else if (cmd.startsWith("MODE:")) {
+    String mode = cmd.substring(5);
+
+    if (mode == "SCROLL") {
       display.displayText(currentText.c_str(), PA_CENTER, 50, 0, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
-  } else if (cmd.startsWith("BRIGHT:")){
-      brightness = cmd.substring(7).toInt();
-      brightness = constrain(brightness, 0, 15);
-      display.setIntensity(brightness);
-  } else if (cmd.StartsWith("MODE:")){
-      String mode = cmd.substring(5);
-      if (mode == "SCROLL"){
-        display.displayText(currentText.c_str(), PA_CENTER, 50, 0, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
-      } else if (mode == "STATIC"){
-        display.displayText(currentText.c_str(), PA_CENTER, 0, 0, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
-      }
+
+    } else if (mode == "STATIC") {
+      display.displayText(currentText.c_str(), PA_CENTER, 0, 0, PA_PRINT, PA_NO_EFFECT);
+    }
   }
 
-  Serial.println("CMD: "+ cmd);
+  Serial.println("CMD: " + cmd);
 }
