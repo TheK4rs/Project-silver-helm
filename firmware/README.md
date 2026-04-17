@@ -1,0 +1,1 @@
+Today I started writing the ESP32 firmware in Arduino IDE, setting up the LED matrix display and Bluetooth control. I implemented basic commands (TEXT, BRIGHT, MODE) to control the visor in real time. Some syntax issues came up, but the core system is now working and ready for testing
