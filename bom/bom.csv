@@ -1,16 +1,16 @@
 Component,Quantity,Unit Price (EGP),Total Price (EGP),Total Price (USD),Purchase Link,Notes
 ESP32 Dev Board,1,300,300,6,https://www.fruugo.eg/esp32s-esp32-devkit-v1-%D9%84%D9%88%D8%AD%D8%A9-%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-wifi-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A%D8%A9-micro-usb-%D8%AB%D9%86%D8%A7%D9%8A%D9%94%D9%8A-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D8%A9/p-420079148,ESP32 DevKit V1 (30-pin)
 MAX7219 8x8 LED Matrix (4-in-1),1,560,560,11.2,https://www.amazon.com/dp/B07FFV537V,4-in-1 chained module (counts as 4 units)
-USB Power Bank (10000-20000mAh),1,900,900,18,https://www.amazon.eg/s?k=power+bank+20000mah,5V output ≥2A required
+USB Power Bank (10000-20000mAh),1,900,900,18,https://www.amazon.com/s?k=power+bank+20000mah,5V output ≥2A required
 Jumper Wires Kit,1,120,120,2.4,https://www.amazon.com/dp/B01EV70C78,120pcs jumper wires set
-Breadboard (optional),1,70,70,1.4,https://www.amazon.eg/s?k=breadboard+830,For prototyping
+Breadboard (optional),1,70,70,1.4,https://www.amazon.com/s?k=breadboard+830,For prototyping
 3D Printed Helmet,1,800,800,16,https://www.thingiverse.com/search?q=daft+punk+helmet&type=things,Print locally or via service
 LM2596 Voltage Regulator (optional),1,80,80,1.6,https://ram-e-shop.com/en/product/step-down-lm2596,Step-down module for stable 5V
-Screws / Mounts / Glue,1,100,100,2,https://www.amazon.eg/s?k=small+screws+set+electronics,General assembly kit
-Acrylic Sheet (3mm visor),1,200,200,4,https://www.amazon.eg/s?k=acrylic+sheet+3mm,Pre-tinted preferred
-Tint Film (optional),1,150,150,3,https://www.amazon.eg/s?k=car+window+tint+film,If using clear acrylic
-Neodymium Magnets (6x3mm),10,15,150,3,https://www.amazon.eg/s?k=neodymium+magnet+6x3mm,For detachable mounting
-Primer + Paint,1,350,350,7,https://www.amazon.eg/s?k=spray+primer+paint,Automotive spray recommended
-Epoxy / Adhesive,1,120,120,2.4,https://www.amazon.eg/s?k=epoxy+glue+plastic,Strong bonding for PLA/ABS
-Hot Glue Sticks,1,80,80,1.6,https://www.amazon.eg/s?k=hot+glue+sticks,For LED mounting
+Screws / Mounts / Glue,1,100,100,2,https://www.amazon.com/s?k=small+screws+set+electronics,General assembly kit
+Acrylic Sheet (3mm visor),1,200,200,4,https://www.amazon.com/s?k=acrylic+sheet+3mm,Pre-tinted preferred
+Tint Film (optional),1,150,150,3,https://www.amazon.com/s?k=car+window+tint+film,If using clear acrylic
+Neodymium Magnets (6x3mm),10,15,150,3,https://www.amazon.com/s?k=neodymium+magnet+6x3mm,For detachable mounting
+Primer + Paint,1,350,350,7,https://www.amazon.com/s?k=spray+primer+paint,Automotive spray recommended
+Epoxy / Adhesive,1,120,120,2.4,https://www.amazon.com/s?k=epoxy+glue+plastic,Strong bonding for PLA/ABS
+Hot Glue Sticks,1,80,80,1.6,https://www.amazon.com/s?k=hot+glue+sticks,For LED mounting
 TOTAL,,-,4030,80.6,,
