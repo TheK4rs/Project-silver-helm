@@ -227,6 +227,7 @@ Typical connections:
 * 1000µF capacitor across power
 * 330Ω resistor on data line
 
+![Wiring](docs/diagrams/wiring.png)
 ---
 
 ### 7. Firmware Setup
